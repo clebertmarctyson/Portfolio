@@ -29,7 +29,7 @@ const Home = () => {
 
         {/* Description */}
         <div className="mb-2">
-          <p className="text-md text-center leading-7 w-96 text-gray-500 lg:text-left">
+          <p className="text-md text-center leading-7 w-80 text-gray-500 lg:text-left">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia,
             esse! Assumenda, veniam corporis amet animi nesciunt quis ipsam
             consequuntur magnam! Lorem ipsum dolor sit amet consectetur
