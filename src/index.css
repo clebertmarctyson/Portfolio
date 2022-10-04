@@ -2,9 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "poppins";
+  src: url("../public/Poppins-Regular.ttf");
+}
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 80%;
+}
+
+#container_me {
+  animation: animateMe 8s linear infinite;
+}
+
+@keyframes animateMe {
+  0% {
+    border-radius: 40% 30% 70% 60% / 30% 70% 60% 40%;
+  }
+
+  25% {
+    border-radius: 70% 60% 40% 30% / 40% 30% 70% 60%;
+  }
+
+  75% {
+    border-radius: 60% 40% 30% 70% / 60% 40% 30% 70%;
+  }
+
+  100% {
+    border-radius: 40% 30% 70% 60% / 30% 70% 60% 40%;
+  }
 }
