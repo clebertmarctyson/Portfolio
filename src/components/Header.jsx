@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <header className="flex justify-between flex-col top-0 w-full items-center bg-white lg:flex-row md:sticky">
-      <h1 className="font-bold text-3xl my-4 md:mb-1 lg:my-0">Marc</h1>
+      <h1 className="font-bold text-3xl my-4 md:mb-1 lg:my-0">Marc Tyson</h1>
 
       <ul className="flex flex-col gap-2 md:gap-4 lg:gap-6 py-4 items-center md:flex-row">
         <li>
