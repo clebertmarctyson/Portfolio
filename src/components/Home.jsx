@@ -57,9 +57,18 @@ const Home = () => {
 
       {/* Social Icons */}
       <div className="bg-red text-2xl flex gap-5 my-16 md:my-20 lg:ml-2 lg:flex-col lg:my-0">
-        <AiFillLinkedin className="cursor-pointer" />
-        <AiFillGithub className="cursor-pointer" />
-        <AiFillTwitterCircle className="cursor-pointer" />
+        <a
+          href="https://www.linkedin.com/in/marc-tyson-cl%C3%A9bert-a399ba177/"
+          target="__BLANK"
+        >
+          <AiFillLinkedin className="cursor-pointer" />
+        </a>
+        <a href="https://github.com/clebertmarctyson" target="__BLANK">
+          <AiFillGithub className="cursor-pointer" />
+        </a>
+        <a href="https://twitter.com/ClebertTyson" target="__BLANK">
+          <AiFillTwitterCircle className="cursor-pointer" />
+        </a>
       </div>
     </div>
   );
