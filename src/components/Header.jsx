@@ -12,7 +12,7 @@ const Header = () => {
       </h1>
 
       <nav className="hidden md:flex">
-        <ul className="flex flex-col gap-4 text-sm uppercase md:flex-row md:mx-auto md:items-center">
+        <ul className="flex flex-col gap-8 text-sm uppercase md:flex-row md:mx-auto md:items-center">
           {items.map((item) => (
             <li>
               <a href={`#${item}`}>{item}</a>
@@ -23,7 +23,7 @@ const Header = () => {
 
       {menuOpen && (
         <nav className="bg-white fixed top-0 flex pt-14 right-0 w-1/2 h-screen p-4 md:hidden">
-          <ul className="flex flex-col gap-4 text-sm uppercase md:flex-row md:mx-auto md:items-center">
+          <ul className="flex flex-col gap-8 text-sm uppercase md:flex-row md:mx-auto md:items-center">
             {items.map((item) => (
               <li>
                 <a onClick={() => setMenuOpen(!menuOpen)} href={`#${item}`}>
