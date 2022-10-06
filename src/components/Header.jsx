@@ -1,30 +1,51 @@
-import React from "react";
+import { useState } from "react";
+import { RiMenuFoldLine, RiMenuUnfoldLine } from "react-icons/ri";
 
 const Header = () => {
-  return (
-    <header className="flex justify-between flex-col top-0 w-full items-center bg-white lg:flex-row md:sticky">
-      <h1 className="font-bold text-3xl my-4 md:mb-1 lg:my-0">Marc Tyson</h1>
+  const [menuOpen, setMenuOpen] = useState(false);
+  const items = ["home", "about", "skills", "services", "portfolio", "contact"];
 
-      <ul className="flex flex-col gap-2 md:gap-4 lg:gap-6 py-4 items-center md:flex-row">
-        <li>
-          <a href="#home">Home</a>
-        </li>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-        <li>
-          <a href="#services">Services</a>
-        </li>
-        <li>
-          <a href="#portfilio">Portfolio</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
+  return (
+    <header className="bg-white sticky top-0 flex justify-between items-center md:flex-col mb-8 py-4 lg:flex-row lg:py-2 lg:mb-0">
+      <h1 className="text-xl font-bold md:my-4 md:text-2xl lg:my-0">
+        Marc Tyson
+      </h1>
+
+      <nav className="hidden md:flex">
+        <ul className="flex flex-col gap-4 text-sm uppercase md:flex-row md:mx-auto md:items-center">
+          {items.map((item) => (
+            <li>
+              <a href={`#${item}`}>{item}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      {menuOpen && (
+        <nav className="bg-white flex fixed top-0 right-0 w-1/2 h-screen p-4 md:hidden">
+          <ul className="flex flex-col gap-4 text-sm uppercase md:flex-row md:mx-auto md:items-center">
+            {items.map((item) => (
+              <li>
+                <a onClick={() => setMenuOpen(!menuOpen)} href={`#${item}`}>
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
+
+      {menuOpen ? (
+        <RiMenuFoldLine
+          className="fixed top-4 right-4 cursor-pointer text-2xl md:hidden"
+          onClick={() => setMenuOpen(!menuOpen)}
+        />
+      ) : (
+        <RiMenuUnfoldLine
+          className="fixed top-4 right-4 cursor-pointer text-2xl md:hidden"
+          onClick={() => setMenuOpen(!menuOpen)}
+        />
+      )}
     </header>
   );
 };

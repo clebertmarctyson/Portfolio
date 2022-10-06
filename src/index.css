@@ -7,6 +7,10 @@
   src: url("../public/Poppins-Regular.ttf");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
@@ -27,7 +31,7 @@ body {
   width: 80%;
 }
 
-#container_me {
+/* #container_me {
   animation: animateMe 8s linear infinite;
 }
 
@@ -47,4 +51,4 @@ body {
   100% {
     border-radius: 40% 30% 70% 60% / 30% 70% 60% 40%;
   }
-}
+} */

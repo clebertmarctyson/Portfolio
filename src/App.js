@@ -9,7 +9,7 @@ import Header from "./components/Header";
 
 const App = () => {
   return (
-    <div className="w-full min-h-screen">
+    <div className="w-full min-h-screen relative">
       <Header />
 
       <Home />
