@@ -6,7 +6,7 @@ const Header = () => {
   const items = ["home", "about", "skills", "services", "portfolio", "contact"];
 
   return (
-    <header className="bg-white sticky top-0 flex justify-between items-center md:flex-col mb-8 py-4 lg:flex-row lg:py-2 lg:mb-0">
+    <header className="backdrop-blur-sm sticky top-0 flex justify-between items-center md:flex-col mb-8 py-4 lg:flex-row lg:py-2 lg:mb-0">
       <h1 className="text-xl font-bold md:my-4 md:text-2xl lg:my-0">
         Marc Tyson
       </h1>
@@ -22,7 +22,7 @@ const Header = () => {
       </nav>
 
       {menuOpen && (
-        <nav className="bg-white flex fixed top-0 right-0 w-1/2 h-screen p-4 md:hidden">
+        <nav className="bg-white fixed top-0 flex pt-14 right-0 w-1/2 h-screen p-4 md:hidden">
           <ul className="flex flex-col gap-4 text-sm uppercase md:flex-row md:mx-auto md:items-center">
             {items.map((item) => (
               <li>
